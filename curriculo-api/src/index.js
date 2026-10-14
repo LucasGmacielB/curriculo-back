@@ -10,11 +10,9 @@ async function iniciarServidor() {
   try {
     await sequelize.authenticate();
 
-    console.log("Conexão com NeonDB estabelecida!");
+    console.log("Conectado ao NeonDB!");
 
     await sequelize.sync();
-
-    console.log("Tabelas sincronizadas com sucesso!");
 
     app.listen(PORT, () => {
       console.log(`Servidor rodando na porta ${PORT}`);
